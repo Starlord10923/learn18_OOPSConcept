@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 #endif
 public class MenuUIManager : MonoBehaviour
 {
-    public void StartGame(){
+    public void StartGame(int i){
+        GameManager.Instance.vehicleChoice = i;
         SceneManager.LoadScene(1);
     }
     public void EndGame(){
