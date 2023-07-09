@@ -5,20 +5,19 @@ using UnityEngine;
 public class Vehicle : MonoBehaviour
 {
     public Rigidbody playerRb;
-    public float speed;
-    public float rotateSpeed;
+    public float speed{ get; protected set;}
+    public float rotateSpeed { get; protected set; }
     public float verticalInput;
     public float horizontalInput;
-    public float velocity;
-    public bool status = false;
+    [SerializeField] private float velocity;
     public bool isGrounded = true;
-    public string vehicleName;
+    public string vehicleName { get; protected set; }
     public Transform COM;
     public virtual void move(){
         verticalInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
         velocity = playerRb.velocity.magnitude;
-        if (playerRb.velocity.magnitude < 40)
+        if (velocity < 40)
         {
             playerRb.AddForce(transform.forward * verticalInput * speed);
         }

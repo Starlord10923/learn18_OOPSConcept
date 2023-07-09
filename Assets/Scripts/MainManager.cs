@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
-    public List<GameObject> vehicles;
-    public new GameObject camera;
-    public int selectedVehicleIndex;
+    [SerializeField] private List<GameObject> vehicles;
+    private new GameObject camera;
+    [SerializeField] private int selectedVehicleIndex;
     void Start()
     {
         selectedVehicleIndex = GameManager.Instance.vehicleChoice;
