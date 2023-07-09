@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Inheritance
+//Polymorphism
+//Abstraction
 public class Plane : Vehicle
 {
     void Start() {

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Inheritance
+//Encapsulation
+//Abstraction
 public class Vehicle : MonoBehaviour
 {
     public Rigidbody playerRb;
