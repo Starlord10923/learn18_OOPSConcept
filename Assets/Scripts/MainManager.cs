@@ -6,9 +6,10 @@ public class MainManager : MonoBehaviour
 {
     public List<GameObject> vehicles;
     public new GameObject camera;
-    public int selectedVehicleIndex = 1;
+    public int selectedVehicleIndex;
     void Start()
     {
+        selectedVehicleIndex = GameManager.Instance.vehicleChoice;
         for (int i = 0; i < vehicles.Count;i++)
         {
             vehicles[i].SetActive(i == selectedVehicleIndex);
