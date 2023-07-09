@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> vehicles;
+    public List<GameObject> vehicles;
     private new GameObject camera;
-    [SerializeField] private int selectedVehicleIndex;
+    public int selectedVehicleIndex;
     void Start()
     {
+        camera = Camera.main.gameObject;
         selectedVehicleIndex = GameManager.Instance.vehicleChoice;
         for (int i = 0; i < vehicles.Count;i++)
         {
